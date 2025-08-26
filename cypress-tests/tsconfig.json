@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "types": ["cypress", "node"]
+  },
+  "include": ["**/*.ts"]
+}
+
+//59f5354d-bc8c-4f6e-bd25-9c7342878887
