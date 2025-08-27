@@ -12,4 +12,16 @@ export default new class HomePage {
     hesloInput = () => cy.get('input[data-testid="inputPassword"]')
     
     loginButton = () => cy.get('button[data-testid="buttonSubmit"]')
+
+    errorMessage = () => cy.get('div[data-testid="notifierMessage"]')
+
+    logoutButton = () => cy.get('a[data-testid="buttonSignout"]')
+
+
+    loginFunkce(email, heslo) {
+        this.login().click()
+        this.emailInput().clear().type(email)
+        this.hesloInput().clear().type(heslo)
+        this.loginButton().should('be.visible').click()
+    }
 }

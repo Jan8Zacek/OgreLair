@@ -6,6 +6,8 @@ import productAddedModalComponent from "../pages/components/productAddedModalCom
 import kosikPage from "../pages/kosikPage";
 import objednvka1Page from "../pages/objednvka1Page";
 import objednavka2Page from "../pages/objednavka2Page";
+import { faker } from '@faker-js/faker';
+
 
 describe('Objednavka', () => {
     beforeEach(() => {    
@@ -20,13 +22,23 @@ describe('Objednavka', () => {
         const product = new productComponent(Cypress.env('productId'))
         product.pridatDoKosiku()
 
+        const randomName = faker.person.fullName()
+        const randomEmail = faker.internet.email()
+        const randomPhone = faker.phone.number({ style: 'international' })
+        const randomAddress = faker.location.streetAddress()
+        const randomCity = faker.location.city()
+        const randomZip = faker.location.zipCode()
+
+
+
+
         productAddedModalComponent.modalDoKosiku()
 
         kosikPage.pokracovaniObjednavky()
 
         objednvka1Page.pokracovatKPlatbe()
 
-        objednavka2Page.VyplneniAdresy()
+        objednavka2Page.VyplneniAdresy(randomName,randomEmail,randomPhone,randomAddress,randomCity,randomZip)
 
         //objednavka se neodesila, necheme zbytecne delat zmatek v eshopu
 

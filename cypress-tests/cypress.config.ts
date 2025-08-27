@@ -12,6 +12,7 @@ export default defineConfig({
       const testData = readFileSync("cypress/fixtures/product.json", "utf8")
       const testDataParsed = JSON.parse(testData)
       config.env = {...testDataParsed}
+
       // implement node event listeners here
 
       return config
