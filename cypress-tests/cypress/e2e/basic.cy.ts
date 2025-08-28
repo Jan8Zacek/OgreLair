@@ -1,4 +1,5 @@
 import homePage from "../pages/homePage"
+import navMenuComponent, { navMenuItem } from "../pages/components/navMenuComponent"
 
 describe('HTML Testy', () => {
 
@@ -17,9 +18,15 @@ describe('HTML Testy', () => {
     homePage.login().should('be.visible')
     homePage.searchBar().should('be.visible')
 
-    
-
-
+    navMenuComponent.navigace(navMenuItem.WARHAMMER40000)
+    navMenuComponent.navigace(navMenuItem.AGEOFSIGMAR)
+    navMenuComponent.navigace(navMenuItem.OSTATNIMINIATURY)
+    navMenuComponent.navigace(navMenuItem.VAMPIRE)
+    navMenuComponent.navigace(navMenuItem.KNIHY)
+    navMenuComponent.navigace(navMenuItem.BARVYATD)
+    navMenuComponent.navigace(navMenuItem.HERNIDOPLNKY)
+    navMenuComponent.navigace(navMenuItem.VYPRODEJ)
+    // navMenuComponent.navigace(navMenuItem.VOUCHERS)
   })
 
 

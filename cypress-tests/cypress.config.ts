@@ -4,6 +4,8 @@ import { readFileSync } from "fs";
 export default defineConfig({
   watchForFileChanges:false,
   projectId: "59244z",
+  viewportWidth:1920,
+  viewportHeight:1080,
   
   e2e: {
     baseUrl: "https://www.ogridoupe.cz/",
