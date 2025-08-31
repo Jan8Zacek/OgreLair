@@ -43,7 +43,8 @@ describe('Objednavka', () => {
         //objednavka se neodesila, necheme zbytecne delat zmatek v eshopu
 
 
-
+        //doplnit asserty na kontrolu
+        
 
 
 

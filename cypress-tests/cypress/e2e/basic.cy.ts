@@ -26,7 +26,6 @@ describe('HTML Testy', () => {
     navMenuComponent.navigace(navMenuItem.BARVYATD)
     navMenuComponent.navigace(navMenuItem.HERNIDOPLNKY)
     navMenuComponent.navigace(navMenuItem.VYPRODEJ)
-    // navMenuComponent.navigace(navMenuItem.VOUCHERS)
   })
 
 
