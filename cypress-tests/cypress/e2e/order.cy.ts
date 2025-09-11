@@ -33,17 +33,24 @@ describe('Objednavka', () => {
 
 
         productAddedModalComponent.modalDoKosiku()
+        cy.url().should('include','kosik/')
 
         kosikPage.pokracovaniObjednavky()
+        cy.url().should('include','objednavka/krok-1/')
 
         objednvka1Page.pokracovatKPlatbe()
+        cy.url().should('include','objednavka/krok-2/')
 
         objednavka2Page.VyplneniAdresy(randomName,randomEmail,randomPhone,randomAddress,randomCity,randomZip)
+        objednavka2Page.nameInput().should('have.value',randomName)
+        objednavka2Page.emailInput().should('have.value', randomEmail)
+        objednavka2Page.phoneInput().should('have.value', randomPhone)
+        objednavka2Page.adressInput().should('have.value',randomAddress)
+        objednavka2Page.cityInput().should('have.value',randomCity)
+        objednavka2Page.zipInput().should('have.value',randomZip)
+
 
         //objednavka se neodesila, necheme zbytecne delat zmatek v eshopu
-
-
-        //doplnit asserty na kontrolu
         
 
 
